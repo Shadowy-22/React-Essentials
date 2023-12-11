@@ -27,6 +27,11 @@ export default function Examples() {
 
     return(
         <Section id="examples" title="Examples">
+            {/* Two important Prop patterns: 
+                1- Passing a component identifier as a value for a prop and using it to dynamically render different HTML elements.
+                2- Working with multiple JSX slots 
+                3- Setting Default Props Values    
+            */}
             <Tabs 
                 buttons={
                     <>
@@ -36,7 +41,9 @@ export default function Examples() {
                         <TabButton isSelected={selectedTopic === 'state'} onClick={() => handleSelect('state')}>State</TabButton> 
                     </>
                 }
-            >{tabContent}</Tabs> 
+            >
+                {tabContent}
+            </Tabs> 
         </Section>
     )
 }
